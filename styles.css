@@ -56,28 +56,25 @@ p {
 header {
   background-image: url(tentativa7.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: center;
+  padding-top: 100px;
 }
 
-.container, header .titulo {
+.container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 15px;
 }
 
-header .titulo h1 {
-  margin-bottom: 0;
-}
-
 .menu {
   background-color: #58a08f;
-  margin-top: 100px;
 }
 
 .menu ul {
   list-style: none;
   text-align: center;
+  padding-left: 0;
 }
 
 .menu ul li {
@@ -100,11 +97,17 @@ header .titulo h1 {
 }
 
 input, select, textarea {
-  padding: 5px;
+  padding: 5px 1%;
   margin: 2px;
   border-radius: 4px;
   border: 1px solid #a9a9a9;
   outline: 0;
+}
+
+input.fonte, textarea {
+  width: 98%;
+  max-width: 480px;
+  display: block;
 }
 
 table {
@@ -138,10 +141,13 @@ footer h5 {
   margin: 0 auto;
 }
 
-.container img {
+.image-map {
+  padding: 15px 0;
+}
+
+.image-map img {
   max-width: 300px;
-  max-height: 450px;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .container {
@@ -153,7 +159,7 @@ footer h5 {
   background-color: #f0f0f0;
   color: #2196f3;
   font-weight: bold;
-  padding:2px;
+  padding: 2px;
 }
 
 #mar:visited {
@@ -170,10 +176,14 @@ footer h5 {
 }
 
 #citacao {
-  width: 500px;
-  border: 1px solid;
-  border-image: black;
+  max-width: 500px;
   padding: 10px;
+  border-style: solid;
+  border-width: 5px 5px 5px 5px;
+  -moz-border-image: url(gabriel-medina.png) 5 5 5 5 repeat repeat;
+  -webkit-border-image: url(gabriel-medina.png) 5 5 5 5 repeat repeat;
+  -o-border-image: url(gabriel-medina.png) 5 5 5 5 repeat repeat;
+  border-image: url(gabriel-medina.png) 5 5 5 5 repeat repeat;
 }
 
 .fonte:focus {
@@ -189,6 +199,7 @@ p:only-child {
   margin-bottom: 0;
   padding: 8px;
 }
+
 .overflow {
   overflow: auto;
   height: 250px;
@@ -198,20 +209,57 @@ form fieldset {
   border-width: 2px;
   border-style: groove;
   border-color: threedface;
-  border-image: initial;
 }
 
 form button {
-    padding: 8px 12px;
-    background-color: #58a08f;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    outline: none;
+  padding: 8px 12px;
+  background-color: #58a08f;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline: none;
 }
 
 form button:hover {
   background-color: #33acbd;
   color: #fff;
   cursor: pointer;
+}
+
+.div-float-left {
+  float: left;
+  width: 65%;
+}
+
+.div-float-right {
+  float: left;
+  width: 35%;
+}
+
+.pg-surfista .div-float-left, .pg-surfista .div-float-right {
+  width: 50%;
+}
+
+@media (max-width:915px) {
+  .div-float-left, .div-float-right {
+    float: none !important;
+    width: 100% !important;
+  }
+
+  #citacao {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (max-width:480px) {
+  .image-map {
+    margin-left: -5px;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+
 }
